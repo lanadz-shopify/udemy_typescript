@@ -84,3 +84,31 @@ const oldCivic = {
 };
 
 printVehicle(oldCivic);
+///// Classes
+
+class VehicleClass {
+  move(): void {
+    console.log('gogogogo');
+  }
+  stop(): void {
+    console.log('stopped');
+  }
+
+  constructor(public speed: number) {}
+  //public modifier for parameter automaticaly does the same as above
+  // speed: number;
+  // constructor(speed: number) {
+  //   this.speed = speed;
+  // }
+  static type: string = 'vechicle';
+  static printType() {
+    console.log(VehicleClass.type);
+  }
+}
+
+// private/public/protected modifiers cannot be changed
+
+let vec = new VehicleClass(60);
+vec.move();
+console.log(vec.speed);
+console.log(VehicleClass.type);
